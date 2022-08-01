@@ -1,6 +1,11 @@
 btcd
 ====
 
+## WHY THE FORK?
+
+Newer versions of bitcoin core don't support `sendrawtransaction`, it has been replaced by `sendrawtransactionwithkey`. btcsuite doesn't support that command, so this fork updates it to use `sendrawtransactionwithkey` in place of `sendrawtransaction`.
+
+
 [![Build Status](https://github.com/btcsuite/btcd/workflows/Build%20and%20Test/badge.svg)](https://github.com/btcsuite/btcd/actions)
 [![Coverage Status](https://coveralls.io/repos/github/btcsuite/btcd/badge.svg?branch=master)](https://coveralls.io/github/btcsuite/btcd?branch=master)
 [![ISC License](https://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)

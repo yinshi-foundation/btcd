@@ -708,8 +708,8 @@ type RawTxInput struct {
 // SignRawTransactionCmd defines the signrawtransaction JSON-RPC command.
 type SignRawTransactionCmd struct {
 	RawTx    string
-	Inputs   *[]RawTxInput
 	PrivKeys *[]string
+	Inputs   *[]RawTxInput
 	Flags    *string `jsonrpcdefault:"\"ALL\""`
 }
 
@@ -1129,7 +1129,7 @@ func init() {
 	MustRegisterCmd("setaccount", (*SetAccountCmd)(nil), flags)
 	MustRegisterCmd("settxfee", (*SetTxFeeCmd)(nil), flags)
 	MustRegisterCmd("signmessage", (*SignMessageCmd)(nil), flags)
-	MustRegisterCmd("signrawtransaction", (*SignRawTransactionCmd)(nil), flags)
+	MustRegisterCmd("signrawtransactionwithkey", (*SignRawTransactionCmd)(nil), flags)
 	MustRegisterCmd("signrawtransactionwithwallet", (*SignRawTransactionWithWalletCmd)(nil), flags)
 	MustRegisterCmd("unloadwallet", (*UnloadWalletCmd)(nil), flags)
 	MustRegisterCmd("walletlock", (*WalletLockCmd)(nil), flags)
